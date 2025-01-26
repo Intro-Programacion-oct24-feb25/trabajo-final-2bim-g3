@@ -116,7 +116,7 @@ public class problema {
     public static String obtenerReporte(String[] a, int[] b) {
         String resultado = "";
         for (int i = 0; i < a.length; i++) {
-            resultado += String.format("%s\n%d",
+            resultado += String.format("%s %d\n",
                     a[i],
                     b[i]);
         }
