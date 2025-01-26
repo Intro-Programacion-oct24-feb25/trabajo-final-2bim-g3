@@ -73,10 +73,12 @@ public class problema {
                     contador[6]++;
                     break;
                 default:
-                    System.out.println("Lo sentimos, el club no tiene esa opción.");
+                    System.out.println("Lo sentimos, "
+                            + "el club no tiene esa opción.");
             }
 
-            System.out.println("¿Desea registrar otra actividad? (1 para si, 0 para no):");
+            System.out.println("¿Desea registrar otra actividad? "
+                    + "(1 para si, 0 para no):");
             int continuar = entrada.nextInt();
             if (continuar == 0) {
                 bandera = false;
@@ -94,9 +96,9 @@ public class problema {
 
         obtenerInformacion(totalActividades);
 
-        
         cadenaAcumuladora = obtenerReporte(mensaje, totalReporte);
-        System.out.printf("Las actividades ingresadas son:\n%s", cadenaAcumuladora);
+        System.out.printf("Las actividades ingresadas son:\n%s",
+                cadenaAcumuladora);
 
     }
 
@@ -116,7 +118,7 @@ public class problema {
     public static String obtenerReporte(String[] a, int[] b) {
         String resultado = "";
         for (int i = 0; i < a.length; i++) {
-            resultado += String.format("%s %d\n",
+            resultado += String.format("%s%d\n",
                     a[i],
                     b[i]);
         }
