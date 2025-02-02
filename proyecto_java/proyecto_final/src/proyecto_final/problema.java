@@ -28,13 +28,14 @@ public class problema {
         int[] contador = new int[7];
         boolean bandera = true;
         int opcion;
-        String[] mensaje = {"Numero de participantes de Futbol: ",
-            " Numero de Participantes de Natación: ",
-            " Numero de Participantes de Atletismo: ",
-            " Numero de Participantes de Basquetbol: ",
-            " Numero de Participantes de Ciclismo: ",
-            " Numero de Participantes de Tenis: ",
-            " Numero de Participantes de Yoga:"};
+        String cadena;
+        String[] mensaje = {"1. Numero de participantes de Futbol: ",
+            "2. Numero de Participantes de Natación: ",
+            "3. Numero de Participantes de Atletismo: ",
+            "4. Numero de Participantes de Basquetbol: ",
+            "5. Numero de Participantes de Ciclismo: ",
+            "6. Numero de Participantes de Tenis: ",
+            "7. Numero de Participantes de Yoga:"};
 
         while (bandera) {
             System.out.println("Ingrese la disciplina a la que desea registrarse: "
@@ -44,32 +45,44 @@ public class problema {
 
             switch (opcion) {
                 case 1:
-                    problemaFutbol.obtenerDatosFutbol();
+                    cadena = problemaFutbol.obtenerDatosFutbol();
+                    System.out.printf("%s\n", cadena);
                     contador[0]++;
 
                     break;
                 case 2:
-                    problemaNatacion.obtenerDatosNatacion();
+                    cadena = problemaNatacion.obtenerDatosNatacion();
+                    System.out.printf("%s\n", cadena);
                     contador[1]++;
                     break;
                 case 3:
-                    problemaAtletismo.obtenerDatosAtletismo();
+                    cadena = problemaAtletismo.obtenerDatosAtletismo();
+                    System.out.printf("%s\n", cadena);
+
                     contador[2]++;
                     break;
                 case 4:
-                    problemaBasquetball.obtenerDatosBasquetball();
+                    cadena = problemaBasquetball.obtenerDatosBasquetball();
+                    System.out.printf("%s\n", cadena);
+
                     contador[3]++;
                     break;
                 case 5:
-                    problemaCiclismo.obtenerDatosCiclismo();
+                    cadena = problemaCiclismo.obtenerDatosCiclismo();
+                    System.out.printf("%s\n", cadena);
+
                     contador[4]++;
                     break;
                 case 6:
-                    problemaTenis.obtenerDatosTenis();
+                    cadena = problemaTenis.obtenerDatosTenis();
+                    System.out.printf("%s\n", cadena);
+
                     contador[5]++;
                     break;
                 case 7:
-                    problemaYoga.obtenerDatosYoga();
+                    cadena = problemaYoga.obtenerDatosYoga();
+                    System.out.printf("%s\n", cadena);
+
                     contador[6]++;
                     break;
                 default:
@@ -97,7 +110,7 @@ public class problema {
         obtenerInformacion(totalActividades);
 
         cadenaAcumuladora = obtenerReporte(mensaje, totalReporte);
-        System.out.printf("Las actividades ingresadas son:\n%s",
+        System.out.printf("\nLas actividades ingresadas son:\n%s",
                 cadenaAcumuladora);
 
     }
@@ -105,13 +118,13 @@ public class problema {
     public static void obtenerInformacion(int totalActividades) {
 
         if (totalActividades == 0) {
-            System.out.println("Mala campaña, debemos mejorar.");
+            System.out.println("\nMala campaña, debemos mejorar.");
         } else if (totalActividades >= 1 && totalActividades <= 5) {
-            System.out.println("Poca participación en el club, hay que mejorar.");
+            System.out.println("\nPoca participación en el club, hay que mejorar.");
         } else if (totalActividades >= 6 && totalActividades <= 15) {
-            System.out.println("Buena participación, sigan así.");
+            System.out.println("\nBuena participación, sigan así.");
         } else if (totalActividades >= 16) {
-            System.out.println("Excelente campaña del club.");
+            System.out.println("\nExcelente campaña del club.");
         }
     }
 

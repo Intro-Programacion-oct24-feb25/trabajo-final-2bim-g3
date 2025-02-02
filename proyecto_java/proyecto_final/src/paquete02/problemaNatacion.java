@@ -12,7 +12,9 @@ import java.util.Scanner;
  */
 public class problemaNatacion {
 
-    public static void obtenerDatosNatacion() {
+    public static String obtenerDatosNatacion() {
+
+        String cadena;
 
         Scanner entrada = new Scanner(System.in);
         System.out.println("Ingrese nombre del participante");
@@ -32,8 +34,11 @@ public class problemaNatacion {
         System.out.println("Ingrese su estilo de nado favorito");
         String equipo = entrada.nextLine();
 
-        System.out.printf("Los datos ingresados son: \n%s\n%d\n%s\n%s\n%s\n",
+        cadena = String.format("Los datos ingresados son: "
+                + "\n%s\n%d\n%s\n%s\n%s\n",
                 nombrePersona, edad, posicion, ciudad, equipo);
+
+        return cadena;
 
     }
 }
