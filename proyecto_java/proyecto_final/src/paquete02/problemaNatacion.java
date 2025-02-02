@@ -26,17 +26,18 @@ public class problemaNatacion {
         System.out.println("Ingrese su nivel (principiante,"
                 + " intermedio o avanzado)");
         entrada.nextLine();
-        String posicion = entrada.nextLine();
+        String nivel = entrada.nextLine();
 
         System.out.println("Ingrese su ciudad de residencia");
         String ciudad = entrada.nextLine();
 
         System.out.println("Ingrese su estilo de nado favorito");
-        String equipo = entrada.nextLine();
+        String estilo = entrada.nextLine();
 
-        cadena = String.format("Los datos ingresados son: "
-                + "\n%s\n%d\n%s\n%s\n%s\n",
-                nombrePersona, edad, posicion, ciudad, equipo);
+        cadena = String.format("\nLos datos ingresados son: "
+                + "\nNombre: %s\nEdad: %d\nCiudad: %s\n"
+                + "Nivel de nado: %s\nEstilo favorito: %s\n",
+                nombrePersona, edad, ciudad, nivel, estilo);
 
         return cadena;
 

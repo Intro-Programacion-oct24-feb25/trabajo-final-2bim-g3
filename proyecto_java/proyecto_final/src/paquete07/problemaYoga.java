@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class problemaYoga {
 
     public static String obtenerDatosYoga() {
-        
+
         String cadena;
 
         Scanner entrada = new Scanner(System.in);
@@ -26,17 +26,19 @@ public class problemaYoga {
         System.out.println("Ingrese su nivel"
                 + "(principiante, intermedio, avanzado)");
         entrada.nextLine();
-        String especialidad = entrada.nextLine();
+        String nivel = entrada.nextLine();
 
         System.out.println("Ingrese su estilo de yoga favorito");
-        String equipo = entrada.nextLine();
+        String estilo = entrada.nextLine();
 
         System.out.println("Ingrese su ciudad de residencia");
-        String posicion = entrada.nextLine();
+        String ciudad = entrada.nextLine();
 
-        cadena = String.format("Los datos ingresados son: \n%s\n%d\n%s\n%s\n%s\n",
-                nombrePersona, edad, especialidad, posicion, equipo);
-        
+        cadena = String.format("\nLos datos ingresados son: "
+                + "\nNombre: %s\nEdad: %d\nCiudad: %s\nNivel: %s\n"
+                + "Estilo favorito: %s\n",
+                nombrePersona, edad, ciudad, nivel, estilo);
+
         return cadena;
 
     }

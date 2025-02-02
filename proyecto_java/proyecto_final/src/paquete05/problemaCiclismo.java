@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class problemaCiclismo {
 
     public static String obtenerDatosCiclismo() {
-        
+
         String cadena;
 
         Scanner entrada = new Scanner(System.in);
@@ -24,20 +24,22 @@ public class problemaCiclismo {
         int edad = entrada.nextInt();
 
         System.out.println("Ingrese el tipo de ciclismo que practica"
-                + "(montana, ruta, urbano)");
+                + "(montaña, ruta, urbano)");
         entrada.nextLine();
 
         String especialidad = entrada.nextLine();
 
         System.out.println("Ingrese su marca de bicicleta preferida");
-        String equipo = entrada.nextLine();
+        String marca = entrada.nextLine();
 
         System.out.println("Ingrese su ciudad de residencia");
-        String posicion = entrada.nextLine();
+        String ciudad = entrada.nextLine();
 
-        cadena = String.format("Los datos ingresados son: \n%s\n%d\n%s\n%s\n%s\n",
-                nombrePersona, edad, especialidad, posicion, equipo);
-        
+        cadena = String.format("\nLos datos ingresados son: "
+                + "\nNombre: %s\nEdad: %d\nCiudad: %s\n"
+                + "Tipo que practica: %s\nMarca favorita: %s\n",
+                nombrePersona, edad, ciudad, especialidad, marca);
+
         return cadena;
 
     }

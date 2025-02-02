@@ -25,17 +25,19 @@ public class problemaBasquetball {
 
         System.out.println("Ingrese su posicion preferida de juego");
         entrada.nextLine();
-        String especialidad = entrada.nextLine();
-
-        System.out.println("Ingrese su estatura");
-        double equipo = entrada.nextDouble();
-
-        System.out.println("Ingrese su ciudad de residencia");
         String posicion = entrada.nextLine();
 
-        cadena = String.format("Los datos ingresados son: "
-                + "\n%s\n%d\n%s\n%.2f\n%s\n",
-                nombrePersona, edad, especialidad, equipo, posicion);
+        System.out.println("Ingrese su estatura");
+        double estatura = entrada.nextDouble();
+
+        System.out.println("Ingrese su ciudad de residencia");
+        entrada.nextLine();
+        String ciudad = entrada.nextLine();
+
+        cadena = String.format("\nLos datos ingresados son: "
+                + "\nNombre: %s\nEdad: %d\nCiudad: %s\nEstatura: %.2f\n"
+                + "Posicion: %s\n",
+                nombrePersona, edad, ciudad, estatura, posicion);
 
         return cadena;
 

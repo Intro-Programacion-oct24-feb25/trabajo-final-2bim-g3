@@ -33,9 +33,10 @@ public class problemaFutbol {
         System.out.println("Ingrese su equipo favorito");
         String equipo = entrada.nextLine();
 
-        cadena = String.format("Los datos ingresados son: "
-                + "\n%s\n%d\n%s\n%s\n%s\n",
-                nombrePersona, edad, posicion, ciudad, equipo);
+        cadena = String.format("\nLos datos ingresados son: "
+                + "\nNombre: %s\nEdad: %d\nCiudad: %s\n"
+                + "Posicion: %s\nEquipo favorito: %s\n",
+                nombrePersona, edad, ciudad, posicion, equipo);
 
         return cadena;
 

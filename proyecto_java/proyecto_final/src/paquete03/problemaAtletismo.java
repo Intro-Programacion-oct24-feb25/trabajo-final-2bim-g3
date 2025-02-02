@@ -29,14 +29,15 @@ public class problemaAtletismo {
         String especialidad = entrada.nextLine();
 
         System.out.println("Ingrese su ciudad de residencia");
-        String equipo = entrada.nextLine();
+        String ciudad = entrada.nextLine();
 
         System.out.println("Ingrese su record personal en su disciplina");
-        String posicion = entrada.nextLine();
+        String record = entrada.nextLine();
 
-        cadena = String.format("Los datos ingresados son: "
-                + "\n%s\n%d\n%s\n%s\n%s\n ",
-                nombrePersona, edad, posicion, especialidad, equipo);
+        cadena = String.format("\nLos datos ingresados son: "
+                + "\nNombre: %s\nEdad: %d\nCiudad: %s\n"
+                + "Record personal: %s\nEspecialidad: %s\n ",
+                nombrePersona, edad, ciudad, especialidad, record);
 
         return cadena;
 
