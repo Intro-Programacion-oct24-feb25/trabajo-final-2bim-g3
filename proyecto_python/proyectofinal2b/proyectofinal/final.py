@@ -8,7 +8,8 @@ contadorTenis = 0
 contadorYoga = 0
 bandera = True
 
-cadena = ""
+global cadena 
+
 from problemaBasquetball import obtenerDatosBasquetball
 from problemaFutbol import obtenerDatosFutbol
 from problemaTenis import obtenerDatosTenis
