@@ -46,43 +46,31 @@ public class problema {
             switch (opcion) {
                 case 1:
                     cadena = problemaFutbol.obtenerDatosFutbol();
-                    System.out.printf("%s\n", cadena);
                     contador[0]++;
 
                     break;
                 case 2:
                     cadena = problemaNatacion.obtenerDatosNatacion();
-                    System.out.printf("%s\n", cadena);
                     contador[1]++;
                     break;
                 case 3:
                     cadena = problemaAtletismo.obtenerDatosAtletismo();
-                    System.out.printf("%s\n", cadena);
-
                     contador[2]++;
                     break;
                 case 4:
                     cadena = problemaBasquetball.obtenerDatosBasquetball();
-                    System.out.printf("%s\n", cadena);
-
                     contador[3]++;
                     break;
                 case 5:
                     cadena = problemaCiclismo.obtenerDatosCiclismo();
-                    System.out.printf("%s\n", cadena);
-
                     contador[4]++;
                     break;
                 case 6:
                     cadena = problemaTenis.obtenerDatosTenis();
-                    System.out.printf("%s\n", cadena);
-
                     contador[5]++;
                     break;
                 case 7:
                     cadena = problemaYoga.obtenerDatosYoga();
-                    System.out.printf("%s\n", cadena);
-
                     contador[6]++;
                     break;
                 default:
