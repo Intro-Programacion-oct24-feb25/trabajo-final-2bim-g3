@@ -64,7 +64,7 @@ while bandera:
     else:
         print("Opción inválida, por favor intente nuevamente.")
 
-# Mostrar resumen de actividades ingresadas al final del ciclo
+
 print("\nLas actividades ingresadas son:")
 print(f"1. Numero de participantes de Futbol: {contadorFutbol}")
 print(f"2. Numero de participantes de Natación: {contadorNatacion}")
