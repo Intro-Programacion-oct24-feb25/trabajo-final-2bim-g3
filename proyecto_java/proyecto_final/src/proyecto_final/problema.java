@@ -115,17 +115,21 @@ public class problema {
 
     }
 
-    public static void obtenerInformacion(int totalActividades) {
+    public static String obtenerInformacion(int totalActividades) {
+        
+        String cadena = "";
 
         if (totalActividades == 0) {
-            System.out.println("\nMala campaña, debemos mejorar.");
+            cadena = ("\nMala campaña, debemos mejorar.");
         } else if (totalActividades >= 1 && totalActividades <= 5) {
-            System.out.println("\nPoca participación en el club, hay que mejorar.");
+            cadena = ("\nPoca participación en el club, hay que mejorar.");
         } else if (totalActividades >= 6 && totalActividades <= 15) {
-            System.out.println("\nBuena participación, sigan así.");
+            cadena = ("\nBuena participación, sigan así.");
         } else if (totalActividades >= 16) {
-            System.out.println("\nExcelente campaña del club.");
+            cadena = ("\nExcelente campaña del club.");
         }
+        
+        return cadena; 
     }
 
     public static String obtenerReporte(String[] a, int[] b) {
