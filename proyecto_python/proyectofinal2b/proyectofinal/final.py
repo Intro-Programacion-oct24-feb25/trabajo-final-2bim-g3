@@ -8,7 +8,15 @@ contadorTenis = 0
 contadorYoga = 0
 bandera = True
 
-global cadena 
+listaFutbol = []
+listaNatacion = []
+listaAtletismo = []
+listaBasquetbol = []
+listaCiclismo = []
+listaTenis = []
+listaYoga = []
+
+global cadena
 
 from problemaBasquetball import obtenerDatosBasquetball
 from problemaFutbol import obtenerDatosFutbol
@@ -27,36 +35,43 @@ while bandera:
 
     if opcion == 1:
         cadena = obtenerDatosFutbol()
+        listaFutbol.append(cadena)
         contadorFutbol += 1
         contador += 1
         print(cadena)
     elif opcion == 2:
         cadena = obtenerDatosNatacion()
+        listaNatacion.append(cadena)
         contadorNatacion += 1
         contador += 1
         print(cadena)
     elif opcion == 3:
         cadena = obtenerDatosAtletismo()
+        listaAtletismo.append(cadena)
         contadorAtletismo += 1
         contador += 1
         print(cadena)
     elif opcion == 4:
         cadena = obtenerDatosBasquetball()
+        listaBasquetbol.append(cadena)
         contadorBasquetbol += 1
         contador += 1
         print(cadena)
     elif opcion == 5:
         cadena = obtenerDatosCiclismo()
+        listaCiclismo.append(cadena)
         contadorCiclismo += 1
         contador += 1
         print(cadena)
     elif opcion == 6:
         cadena = obtenerDatosTenis()
+        listaTenis.append(cadena)
         contadorTenis += 1
         contador += 1
         print(cadena)
     elif opcion == 7:
         cadena = obtenerDatosYoga()
+        listaYoga.append(cadena)
         contadorYoga += 1
         contador += 1
         print(cadena)
@@ -64,7 +79,6 @@ while bandera:
         bandera = False
     else:
         print("Opción inválida, por favor intente nuevamente.")
-
 
 print("\nLas actividades ingresadas son:")
 print(f"1. Numero de participantes de Futbol: {contadorFutbol}")
@@ -75,7 +89,6 @@ print(f"5. Numero de participantes de Ciclismo: {contadorCiclismo}")
 print(f"6. Numero de participantes de Tenis: {contadorTenis}")
 print(f"7. Numero de participantes de Yoga: {contadorYoga}")
 
-
 if contador == 0:
     print("Mala campaña, debemos mejorar.")
 elif contador >= 1 and contador <= 5:
@@ -84,3 +97,12 @@ elif contador >= 6 and contador <= 15:
     print("Buena participación, sigan así.")
 elif contador >= 16:
     print("Excelente campaña del club.")
+
+print("\nDatos ingresados por disciplina:")
+print("Futbol:", listaFutbol)
+print("Natación:", listaNatacion)
+print("Atletismo:", listaAtletismo)
+print("Basquetbol:", listaBasquetbol)
+print("Ciclismo:", listaCiclismo)
+print("Tenis:", listaTenis)
+print("Yoga:", listaYoga)
