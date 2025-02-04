@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author utpl
  */
-public class problemaFutbol {
+public class ProblemaFutbol {
 
     public static String obtenerDatosFutbol() {
 
@@ -33,7 +33,7 @@ public class problemaFutbol {
         System.out.println("Ingrese su equipo favorito");
         String equipo = entrada.nextLine();
 
-        cadena = String.format("\nLos datos ingresados son: "
+        cadena = String.format("Los datos ingresados para futbol son: "
                 + "\nNombre: %s\nEdad: %d\nCiudad: %s\n"
                 + "Posicion: %s\nEquipo favorito: %s\n",
                 nombrePersona, edad, ciudad, posicion, equipo);

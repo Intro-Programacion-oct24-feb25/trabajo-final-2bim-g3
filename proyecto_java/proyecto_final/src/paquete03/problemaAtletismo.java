@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author utpl
  */
-public class problemaAtletismo {
+public class ProblemaAtletismo {
 
     public static String obtenerDatosAtletismo() {
 
@@ -34,7 +34,7 @@ public class problemaAtletismo {
         System.out.println("Ingrese su record personal en su disciplina");
         String record = entrada.nextLine();
 
-        cadena = String.format("\nLos datos ingresados son: "
+        cadena = String.format("Los datos ingresados para atletismo son: "
                 + "\nNombre: %s\nEdad: %d\nCiudad: %s\n"
                 + "Record personal: %s\nEspecialidad: %s\n ",
                 nombrePersona, edad, ciudad, especialidad, record);

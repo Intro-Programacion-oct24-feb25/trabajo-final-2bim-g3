@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author utpl
  */
-public class problemaBasquetball {
+public class ProblemaBasquetball {
 
     public static String obtenerDatosBasquetball() {
 
@@ -34,7 +34,7 @@ public class problemaBasquetball {
         entrada.nextLine();
         String ciudad = entrada.nextLine();
 
-        cadena = String.format("\nLos datos ingresados son: "
+        cadena = String.format("Los datos ingresados para basquetball son: "
                 + "\nNombre: %s\nEdad: %d\nCiudad: %s\nEstatura: %.2f\n"
                 + "Posicion: %s\n",
                 nombrePersona, edad, ciudad, estatura, posicion);

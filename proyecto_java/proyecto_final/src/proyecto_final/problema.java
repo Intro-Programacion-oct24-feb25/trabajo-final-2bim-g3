@@ -5,19 +5,19 @@
 package proyecto_final;
 
 import java.util.Scanner;
-import paquete01.problemaFutbol;
-import paquete02.problemaNatacion;
-import paquete03.problemaAtletismo;
-import paquete04.problemaBasquetball;
-import paquete05.problemaCiclismo;
-import paquete06.problemaTenis;
-import paquete07.problemaYoga;
+import paquete01.ProblemaFutbol;
+import paquete02.ProblemaNatacion;
+import paquete03.ProblemaAtletismo;
+import paquete04.ProblemaBasquetball;
+import paquete05.ProblemaCiclismo;
+import paquete06.ProblemaTenis;
+import paquete07.ProblemaYoga;
+
 /**
  *
  * @author utpl
  */
-
-public class problema {
+public class Problema {
 
     public static String cadenaAcumuladora = "";
 
@@ -45,44 +45,46 @@ public class problema {
 
             switch (opcion) {
                 case 1:
-                    cadena = problemaFutbol.obtenerDatosFutbol();
-                    System.out.printf("%s\n", cadena);
+                    cadena = ProblemaFutbol.obtenerDatosFutbol();
+                    cadenaAcumuladora = String.format("%s\n%s",
+                            cadenaAcumuladora, cadena);
                     contador[0]++;
 
                     break;
                 case 2:
-                    cadena = problemaNatacion.obtenerDatosNatacion();
-                    System.out.printf("%s\n", cadena);
+                    cadena = ProblemaNatacion.obtenerDatosNatacion();
+                    cadenaAcumuladora = String.format("%s\n%s",
+                            cadenaAcumuladora, cadena);
                     contador[1]++;
                     break;
                 case 3:
-                    cadena = problemaAtletismo.obtenerDatosAtletismo();
-                    System.out.printf("%s\n", cadena);
-
+                    cadena = ProblemaAtletismo.obtenerDatosAtletismo();
+                    cadenaAcumuladora = String.format("%s\n%s",
+                            cadenaAcumuladora, cadena);
                     contador[2]++;
                     break;
                 case 4:
-                    cadena = problemaBasquetball.obtenerDatosBasquetball();
-                    System.out.printf("%s\n", cadena);
-
+                    cadena = ProblemaBasquetball.obtenerDatosBasquetball();
+                    cadenaAcumuladora = String.format("%s\n%s",
+                            cadenaAcumuladora, cadena);
                     contador[3]++;
                     break;
                 case 5:
-                    cadena = problemaCiclismo.obtenerDatosCiclismo();
-                    System.out.printf("%s\n", cadena);
-
+                    cadena = ProblemaCiclismo.obtenerDatosCiclismo();
+                    cadenaAcumuladora = String.format("%s\n%s",
+                            cadenaAcumuladora, cadena);
                     contador[4]++;
                     break;
                 case 6:
-                    cadena = problemaTenis.obtenerDatosTenis();
-                    System.out.printf("%s\n", cadena);
-
+                    cadena = ProblemaTenis.obtenerDatosTenis();
+                    cadenaAcumuladora = String.format("%s\n%s",
+                            cadenaAcumuladora, cadena);
                     contador[5]++;
                     break;
                 case 7:
-                    cadena = problemaYoga.obtenerDatosYoga();
-                    System.out.printf("%s\n", cadena);
-
+                    cadena = ProblemaYoga.obtenerDatosYoga();
+                    cadenaAcumuladora = String.format("%s\n%s",
+                            cadenaAcumuladora, cadena);
                     contador[6]++;
                     break;
                 default:
@@ -109,7 +111,11 @@ public class problema {
 
         obtenerInformacion(totalActividades);
 
-        cadenaAcumuladora = obtenerReporte(mensaje, totalReporte);
+        String cadena1 = obtenerReporte(mensaje, totalReporte);
+
+        cadenaAcumuladora = String.format("%s%s", cadena1,
+                cadenaAcumuladora);
+
         System.out.printf("\nLas actividades ingresadas son:\n%s",
                 cadenaAcumuladora);
 

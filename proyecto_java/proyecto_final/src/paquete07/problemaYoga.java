@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author utpl
  */
-public class problemaYoga {
+public class ProblemaYoga {
 
     public static String obtenerDatosYoga() {
 
@@ -34,7 +34,7 @@ public class problemaYoga {
         System.out.println("Ingrese su ciudad de residencia");
         String ciudad = entrada.nextLine();
 
-        cadena = String.format("\nLos datos ingresados son: "
+        cadena = String.format("Los datos ingresados para yoga son: "
                 + "\nNombre: %s\nEdad: %d\nCiudad: %s\nNivel: %s\n"
                 + "Estilo favorito: %s\n",
                 nombrePersona, edad, ciudad, nivel, estilo);

@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author utpl
  */
-public class problemaNatacion {
+public class ProblemaNatacion {
 
     public static String obtenerDatosNatacion() {
 
@@ -34,7 +34,7 @@ public class problemaNatacion {
         System.out.println("Ingrese su estilo de nado favorito");
         String estilo = entrada.nextLine();
 
-        cadena = String.format("\nLos datos ingresados son: "
+        cadena = String.format("Los datos ingresados para natacion son: "
                 + "\nNombre: %s\nEdad: %d\nCiudad: %s\n"
                 + "Nivel de nado: %s\nEstilo favorito: %s\n",
                 nombrePersona, edad, ciudad, nivel, estilo);
