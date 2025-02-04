@@ -45,18 +45,13 @@ public class Problema {
 
             switch (opcion) {
                 case 1:
-<<<<<<< HEAD
                     cadena = ProblemaFutbol.obtenerDatosFutbol();
                     cadenaAcumuladora = String.format("%s\n%s",
                             cadenaAcumuladora, cadena);
-=======
-                    cadena = problemaFutbol.obtenerDatosFutbol();
->>>>>>> 81e5a674d1273435051fc38e5fa2c3c9d069447b
                     contador[0]++;
 
                     break;
                 case 2:
-<<<<<<< HEAD
                     cadena = ProblemaNatacion.obtenerDatosNatacion();
                     cadenaAcumuladora = String.format("%s\n%s",
                             cadenaAcumuladora, cadena);
@@ -90,31 +85,6 @@ public class Problema {
                     cadena = ProblemaYoga.obtenerDatosYoga();
                     cadenaAcumuladora = String.format("%s\n%s",
                             cadenaAcumuladora, cadena);
-=======
-                    cadena = problemaNatacion.obtenerDatosNatacion();
-                    contador[1]++;
-                    break;
-                case 3:
-                    cadena = problemaAtletismo.obtenerDatosAtletismo();
-                    contador[2]++;
-                    break;
-                case 4:
-                    cadena = problemaBasquetball.obtenerDatosBasquetball();
-                    contador[3]++;
-                    break;
-                case 5:
-                    cadena = problemaCiclismo.obtenerDatosCiclismo();
-                    contador[4]++;
-                    break;
-                case 6:
-                    cadena = problemaTenis.obtenerDatosTenis();
-                    contador[5]++;
-                    break;
-                case 7:
-                    cadena = problemaYoga.obtenerDatosYoga();
->>>>>>> 81e5a674d1273435051fc38e5fa2c3c9d069447b
-                    contador[6]++;
-                    break;
                 default:
                     System.out.println("Lo sentimos, "
                             + "el club no tiene esa opción.");
@@ -137,20 +107,23 @@ public class Problema {
             totalReporte[i] = contador[i];
         }
 
-        obtenerInformacion(totalActividades);
+        String cadena2 = obtenerInformacion(totalActividades);
 
         String cadena1 = obtenerReporte(mensaje, totalReporte);
 
-        cadenaAcumuladora = String.format("%s%s", cadena1,
-                cadenaAcumuladora);
+        cadenaAcumuladora = String.format("%s\n\n%s\n"
+                + "Las actividades ingresadas son: \n%s",
+                cadena2,
+                cadenaAcumuladora,
+                cadena1);
 
-        System.out.printf("\nLas actividades ingresadas son:\n%s",
+        System.out.printf("\n%s",
                 cadenaAcumuladora);
 
     }
 
     public static String obtenerInformacion(int totalActividades) {
-        
+
         String cadena = "";
 
         if (totalActividades == 0) {
@@ -162,8 +135,8 @@ public class Problema {
         } else if (totalActividades >= 16) {
             cadena = ("\nExcelente campaña del club.");
         }
-        
-        return cadena; 
+
+        return cadena;
     }
 
     public static String obtenerReporte(String[] a, int[] b) {
