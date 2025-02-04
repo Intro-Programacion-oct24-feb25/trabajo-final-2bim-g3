@@ -45,13 +45,18 @@ public class Problema {
 
             switch (opcion) {
                 case 1:
+<<<<<<< HEAD
                     cadena = ProblemaFutbol.obtenerDatosFutbol();
                     cadenaAcumuladora = String.format("%s\n%s",
                             cadenaAcumuladora, cadena);
+=======
+                    cadena = problemaFutbol.obtenerDatosFutbol();
+>>>>>>> 81e5a674d1273435051fc38e5fa2c3c9d069447b
                     contador[0]++;
 
                     break;
                 case 2:
+<<<<<<< HEAD
                     cadena = ProblemaNatacion.obtenerDatosNatacion();
                     cadenaAcumuladora = String.format("%s\n%s",
                             cadenaAcumuladora, cadena);
@@ -85,6 +90,29 @@ public class Problema {
                     cadena = ProblemaYoga.obtenerDatosYoga();
                     cadenaAcumuladora = String.format("%s\n%s",
                             cadenaAcumuladora, cadena);
+=======
+                    cadena = problemaNatacion.obtenerDatosNatacion();
+                    contador[1]++;
+                    break;
+                case 3:
+                    cadena = problemaAtletismo.obtenerDatosAtletismo();
+                    contador[2]++;
+                    break;
+                case 4:
+                    cadena = problemaBasquetball.obtenerDatosBasquetball();
+                    contador[3]++;
+                    break;
+                case 5:
+                    cadena = problemaCiclismo.obtenerDatosCiclismo();
+                    contador[4]++;
+                    break;
+                case 6:
+                    cadena = problemaTenis.obtenerDatosTenis();
+                    contador[5]++;
+                    break;
+                case 7:
+                    cadena = problemaYoga.obtenerDatosYoga();
+>>>>>>> 81e5a674d1273435051fc38e5fa2c3c9d069447b
                     contador[6]++;
                     break;
                 default:
@@ -121,17 +149,21 @@ public class Problema {
 
     }
 
-    public static void obtenerInformacion(int totalActividades) {
+    public static String obtenerInformacion(int totalActividades) {
+        
+        String cadena = "";
 
         if (totalActividades == 0) {
-            System.out.println("\nMala campaña, debemos mejorar.");
+            cadena = ("\nMala campaña, debemos mejorar.");
         } else if (totalActividades >= 1 && totalActividades <= 5) {
-            System.out.println("\nPoca participación en el club, hay que mejorar.");
+            cadena = ("\nPoca participación en el club, hay que mejorar.");
         } else if (totalActividades >= 6 && totalActividades <= 15) {
-            System.out.println("\nBuena participación, sigan así.");
+            cadena = ("\nBuena participación, sigan así.");
         } else if (totalActividades >= 16) {
-            System.out.println("\nExcelente campaña del club.");
+            cadena = ("\nExcelente campaña del club.");
         }
+        
+        return cadena; 
     }
 
     public static String obtenerReporte(String[] a, int[] b) {
